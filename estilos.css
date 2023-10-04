@@ -1,0 +1,263 @@
+
+@font-face {
+    font-family: Nickname;
+    src: url(/fuente/Nickname\ DEMO.otf);
+}
+@font-face {
+    font-family: be;
+    src: url(/fuente/be-cool-regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.portafolio .titulo1 {
+    font-family: be;
+    color: rgb(12, 4, 4); 
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.navegacion .h3 {
+    font-size: 1rem;
+}
+
+.navegacion {
+    background-color: #fff;
+    padding: 1em;
+    overflow: hidden;
+    display: flex; /*los elementos quedan en fila */
+
+}
+.item {
+    color: #050500;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px; /*tamaño circulos*/
+    float: left;
+    display: flex; 
+    justify-content: center; /*centrar horizontal*/
+    align-items: center; /*centra vertical*/
+    text-align: center; /*asegurar texto centrado*/
+}
+
+#item1 {
+    border-radius: 50%;
+    margin: 0 25px; 
+    background-color: #ffe800;
+}
+#item2 {
+    border-radius: 50%;
+    margin: 0 25px; 
+    background-color: #ffe800;
+}
+#item3 {
+    border-radius: 50%;
+    margin: 0 25px; 
+    background-color: #ffe800;
+}
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #d9a7c7;  /* https://uigradients.com/#BrokenHearts */
+    background: linear-gradient(to right, hsla(55, 100%, 93%, 0.651), hsla(322, 40%, 75%, 0.658)), url(img/fondo.jpg);
+    background: linear-gradient(to right, hsla(55, 100%, 93%, 0.651), hsla(322, 40%, 75%, 0.658)), url(img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+nav  {
+    font-family: be;
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav a {
+    color: #080303;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 20px;  /*separa los item*/
+    text-decoration: underline;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+header .textos-header{
+   
+    display: flex;
+    height: 430px;
+    width: 100%;
+ 
+    justify-content: center;
+    flex-direction: column;
+    text-align:center; ;
+}
+.textos-header h1 {
+    font-family: Nickname ;
+    font-size: 50px;
+    color:#050501;
+   
+}
+.textos-header h2 {
+    font-family: Nickname ;
+    font-size: 30px;
+    font-weight: 300px;
+    color:#050501;
+}
+
+/*galeria-servicios*/
+
+.servicios .contenedor {
+    background-color: #fff;
+    margin-top: 150px;
+    display: flex;
+
+}
+.servicios .contenedor {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+.galeria-port {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.imagen-port {
+    width: 20%;
+    margin-bottom: 10px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 5);
+
+}
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0); 
+    background: hsla(273, 91%, 27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hover-galeria img {
+    width: 70px;
+}
+.hover-galeria p {
+    font-size: 30px;
+    color: #fff;
+}
+
+
+.imagen-port:hover .hover-galeria {
+    transform: scale(1); 
+
+}
+
+footer{
+
+    height: 250px;
+    background-color: #F5DCEC;
+    padding: 50px 0;
+    margin: auto; /*centrar*/
+    overflow: hidden; /*todo queda adentro*/
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly; 
+    margin: auto;
+    padding-bottom: 30px;
+
+}
+.content-foo{
+    text-align: center;
+}
+
+ .content-foo h4{
+    color: #070101;
+    border-bottom: 3px solid #ffe800;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+}
+.content-foo p{
+    color: #070101;
+}
+
+.foot-redes img {
+    width: 5%;
+    height: 5%;
+    margin-right: 70px;  /*separa los item*/
+    align-items: center; 
+}
+
+@media screen (max-width: 900px) {
+   header{
+    background-position: center
+   }
+
+
+}
+
+@media screen (max-width: 500px) {
+    nav {
+     text-align: center;
+     padding: 30px 0 0 0;
+
+    }
+    nav a {
+        padding-right: 5px;
+
+    }
+    .textos-header h1 {
+        font-size: 35px;
+    }
+    
+    .item{
+        font-size: 12px ;
+        padding: 12px;
+        margin: 0 0px;
+        width: 70px;
+        height: 70px;
+
+    }
+    
+    #item1 #item2 #item3{
+        margin: 0 15px;
+    }
+        
+
+
+    
+ 
+ 
+ }
